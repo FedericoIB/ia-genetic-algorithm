@@ -67,7 +67,7 @@ public class CorrerAlgoritmo
 		try
 		{
 			FileHandler fileText;
-			fileText=new FileHandler("src/main/java/TP_Grupo13_2019/ResultadoCorrida.txt");
+			fileText=new FileHandler("ResultadoCorrida.txt");
 			SimpleFormatter formatterTxt = new SimpleFormatter();
 			fileText.setFormatter(formatterTxt);
 			Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).addHandler(fileText);

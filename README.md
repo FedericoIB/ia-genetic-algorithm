@@ -19,11 +19,11 @@ docker build -f Dockerfile -t ia-genetic-algorithm-image .
 Compilamos el proyecto en un contenedor temporal
 
 ```bash
-docker run --rm -v "$PWD"/build/classes:/usr/src/ia-genetic-algorithm  --name ia-runner  ia-genetic-algorithm-image:latest javac main.java.TP_Grupo13_2019.CorrerAlgoritmo
+docker run --rm -v "$PWD"/src:/usr/src/ia-genetic-algorithm --name ia-runner ia-genetic-algorithm-image:latest javac main/java/TP_Grupo13_2019/CorrerAlgoritmo.java
 ```
 
 Ejecutamos el proyecto una vez que tenemos la compilación
 
 ```bash
-docker run --rm --name ia-runner  ia-genetic-algorithm-image:latest java main.java.TP_Grupo13_2019.CorrerAlgoritmo > `date +"%d-%m-%Y_%H:%M:%S"`".out"
+docker run --rm -v "$PWD"/src:/usr/src/ia-genetic-algorithm --name ia-runner ia-genetic-algorithm-image:latest java main.java.TP_Grupo13_2019.CorrerAlgoritmo
 ```
