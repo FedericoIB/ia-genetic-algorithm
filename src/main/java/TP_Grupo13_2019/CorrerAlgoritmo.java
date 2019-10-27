@@ -24,7 +24,7 @@ public class CorrerAlgoritmo {
         config.setPoblacionInicial(50);
         config.setMetodoDeSeleccion(new ControlSobreNumeroEsperado());
         config.setCruzamiento(new BinomialAzar());
-        config.setCriterioDeParo(new CantidadDeCiclos(10L));
+        config.setCriterioDeParo(new CantidadDeCiclos(50L));
         config.setMutacion(new MutacionSimple(0.5));
 
         AlgoritmoGenetico algoritmoJugadorOptimo = new AlgoritmoGenetico(config, Jugador.class);
